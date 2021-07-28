@@ -11,6 +11,13 @@ let dateData = JSON.parse(localStorage.getItem('dateData'))
 
 let weightArray = []
 
+const clearTrackerInputs = () => {
+    currentWeightInput.value = ''
+    yearInput.value = ''
+    monthInput.value = ''
+    dayInput.value = ''
+}
+
 submitButton.addEventListener('click', () => {
     let newWeightData = currentWeightInput.value
     let newDateData = `${yearInput.value}-${monthInput.value}-${dayInput.value}`
@@ -27,16 +34,15 @@ submitButton.addEventListener('click', () => {
 
     localStorage.setItem('weightData', JSON.stringify(oldWeightData))
     localStorage.setItem('dateData', JSON.stringify(oldDateData))
+
+    clearTrackerInputs()
+    location.reload()
 })
 
 refreshButton.addEventListener('click', () => {
+    localStorage.clear()
     location.reload()
-    console.log(window.innerWidth)
-    // console.log(window.innerHeight)
 })
-
-
-
 
 for (let i = 0; i < weightData.length; i++) {
     weightArray.push(parseInt(weightData[[i]]))
@@ -64,3 +70,5 @@ let massPopChart = new Chart(myChart, {
         responsive: true
     }
 })
+
+clearTrackerInputs()

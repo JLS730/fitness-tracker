@@ -19,16 +19,35 @@ const calculateCaloriesButton = document.querySelector('.calculate-calories-butt
 maleCheckBox.checked = true
 poundsCheckBox.checked = true
 
+const clearCalorieInputs = () => {
+    ageInput.value = ''
+    feetInput.value = ''
+    inchesInput.value = ''
+    centimetersInput.value = ''
+    weightInput.value = ''
+}
+
+const clearTrackerInputs = () => {
+    currentWeightInput.value = ''
+    yearInput.value = ''
+    monthInput.value = ''
+    dayInput.value = ''
+}
+
 poundsCheckBox.addEventListener('click', () => {
     weightInput.setAttribute('placeholder', 'Pounds(lbs.)')
     centimeterContainer.classList.add('hidden')
     heightContainer.classList.remove('hidden')
+
+    clearCalorieInputs()
 })
 
 kilogramsCheckBox.addEventListener('click', () => {
     weightInput.setAttribute('placeholder', 'Kilograms(kgs.)')
     centimeterContainer.classList.remove('hidden')
     heightContainer.classList.add('hidden')
+
+    clearCalorieInputs()
 })
 
 calculateCaloriesButton.addEventListener('click', () => {
@@ -179,3 +198,5 @@ calculateCaloriesButton.addEventListener('click', () => {
         return
     }
 })
+
+clearInputs()
