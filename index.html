@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" defer></script> 
+        <script src="./src/index.js" defer></script>
+        <script src="./src/graph.js" defer></script>
+        <title>Fitness Tracker App</title>
+    </head>
+    <body>
+        <nav class="navigation-bar">
+            <div class="navigation-bar-left">
+                <!-- <a href="#" class="navigation-home">Home</a> -->
+            </div>
+            <div class="navigation-bar-right">
+                <a href="#calorie-calculator-container" class="navigation-bar-links calorie-tracker-link">Calorie Tracker</a>
+                <a href="#weight-loss-container" class="navigation-bar-links weight-tracker-link">Weight Tracker</a>
+            </div>
+        </nav>
+
+        <div class="video-header-container">
+            <div class="video-header-tint">
+                <video autoplay muted loop  id="myVideo" class="myVideo">
+                    <source src="./videos/calorieCalculatorWebsite2.mp4" type="video/mp4" class="header-video">
+                </video>
+            </div>
+            <h2 class="header-title-top">Better Life</h2>
+            <h2 class="header-title-bottom">Fitness Tracker</h2>
+            <img src="./images/logo2.png" alt="" class="header-logo">
+        </div>
+
+        <div class="calorie-calculator-container" id="calorie-calculator-container">
+            <h2 class="calorie-calculator-title">Track Your Calorie Intake</h2>
+
+            <div class="calorie-calculator-container-inner">
+                <form class="calorie-calculator">
+                
+                    <div class="calorie-calculator-sex-container">
+                        <label for="gender-checkbox">Gender:</label>
+                        <div class="calorie-calculator-gender-selection-container">
+                            <div class="male-container">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender-checkbox" id="male">
+                            </div>
+                            <div class="female-container">
+                                <label for="female">Female</label>
+                                <input type="radio" name="gender-checkbox" id="female">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calorie-calculator-weight-measurement-container">
+                        <label for="weight-checkbox">Pounds(lbs) or Kilograms(kgs):</label>
+                        <div class="calorie-calculator-weight-container">
+                            <div class="pounds-container">
+                                <label for="pounds">Pounds</label>
+                                <input type="radio" name="weight-checkbox" id="pounds">
+                            </div>
+                            <div class="kilograms-container">
+                                <label for="kilograms">Kilograms</label>
+                                <input type="radio" name="weight-checkbox" id="kilograms">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calorie-calculator-age-container">
+                        <label for="age">Age</label>
+                        <input type="text" class="calorie-calculator-text-input age-input" value="25">
+                    </div>
+                    
+                    <div class="calorie-calculator-height-container">
+                        <label for="height">Height</label>
+                        <div class="height-values">
+                            <input type="text" class="calorie-calculator-text-input feet-height-input feet-input" placeholder="Feet">
+                            <input type="text" class="calorie-calculator-text-input feet-height-input inches-input" placeholder="Inches">
+                        </div>
+                        <div class="centimeter-value hidden">
+                            <input type="text" class="calorie-calculator-text-input feet-height-input centimeters-input" placeholder="Centimeters">
+                        </div>
+                    </div>
+                    
+                    <div class="calorie-calculator-weight-container">
+                        <label for="weight">Weight</label>
+                        <input type="text" class="calorie-calculator-text-input weight-input" placeholder="Pounds(lbs.)">
+                    </div>
+                    
+                    <div class="calorie-calculator-activity-container">
+                        <label for="activity">Activity</label>
+                        <select name="activity-amount" class="activity-amount" id="activity-amount">
+                            <option value="no-exercise">Little To No Exercise</option>
+                            <option value="light-exercise">Light Exercise</option>
+                            <option value="moderate-exercise">Moderate Exercise</option>
+                            <option value="hard-exercise">Hard Exercise</option>
+                            <option value="very-hard-exercise">Very Hard Exercise</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="calculate-calories-button">Calculate</button>
+                </form>
+    
+                <div class="calorie-calculator-results-container calorie-calculator">
+                    <h2 class="calorie-calculator-results-title">Your Calorie Intake</h2>
+                    <div class="calorie-calculator-maintain results-container">
+                        <h3 class="loss-text loss-text-maintain">Maintain Weight</h3>
+                        <div class="calorie-count-container">
+                            <h2 class="calorie-count calorie-count-maintain">0</h2>
+                            <h3 class="calories-day">Calories/day</h3>
+                        </div>
+                    </div>
+                    <div class="calorie-calculator-mild-loss results-container">
+                        <h3 class="loss-text">Mild Weight Loss</h3>
+                        <div class="calorie-count-container">
+                            <h2 class="calorie-count calorie-count-mild">0</h2>
+                            <h3 class="calories-day">Calories/day</h3>
+                        </div>
+                    </div>
+                    <div class="calorie-calculator-loss results-container">
+                        <h3 class="loss-text">Weight Loss</h3>
+                        <div class="calorie-count-container">
+                            <h2 class="calorie-count calorie-count-loss">0</h2>
+                            <h3 class="calories-day">Calories/day</h3>
+                        </div>
+                    </div>
+                    <div class="calorie-calculator-extreme-loss results-container">
+                        <h3 class="loss-text">Extreme Weight Loss</h3>
+                        <div class="calorie-count-container">
+                            <h2 class="calorie-count calorie-count-extreme">0</h2>
+                            <h3 class="calories-day">Calories/day</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weight-loss-container" id="weight-loss-container">
+            <h2 class="weight-loss-title">Track Your Weight Loss Progress</h2>
+            <div class="weight-loss-graph-container">
+                <div class="weight-date-container">
+                    <form action="" class="weight-date">
+                        <div class="current-weight-container">
+                            <label for="current-weight">Current Weight</label>
+                            <input type="text" id="current-weight" class="current-weight" placeholder="lb/kg">
+                        </div>
+                        <div class="current-date-container">
+                            <label for="current-date">Date</label>
+                            <input type="text" class="date-input date-year" placeholder="Year">-<input type="text" class="date-input date-month" placeholder="Month">-<input type="text" class="date-input date-day" placeholder="Day">
+                        </div>
+                        <button class="submit-weight-button" type="button">Submit</button>
+                        <button class="submit-weight-button submit-refresh-button" type="button">Refresh</button>
+                    </form>
+                </div>
+                <!-- <div id="curve_chart" class="graph" style="width: 900px; height: 500px"></div> -->
+
+                <div class="graph-container">
+                    <canvas id="myChart" class="myChart" height="300" width="600"></canvas>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    </body>
+</html>

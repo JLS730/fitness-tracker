@@ -1,0 +1,902 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff6e4;
+}
+
+.navigation-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  border-bottom: 3px solid black;
+  padding: 10px 0;
+}
+
+.navigation-bar .navigation-bar-left {
+  margin: 0 20px;
+}
+
+.navigation-bar .navigation-bar-right {
+  margin: 0 20px;
+}
+
+.navigation-bar .navigation-bar-right .navigation-bar-links {
+  margin: 0 70px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+.video-header-container {
+  z-index: -1;
+  position: relative;
+  background-color: grey;
+  font-family: 'Abril Fatface', cursive;
+  color: #eeeeee;
+}
+
+.video-header-container .video-header-tint {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-header-container .video-header-tint .myVideo {
+  position: relative;
+  z-index: -1;
+  height: 45vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 6%;
+     object-position: 0 6%;
+}
+
+.video-header-container .video-header-tint .myVideo .header-video {
+  background-color: grey;
+}
+
+.video-header-container .header-title-top {
+  top: 15%;
+  left: 33%;
+  z-index: 1;
+  font-size: 70px;
+  position: absolute;
+}
+
+.video-header-container .header-title-bottom {
+  top: 35%;
+  left: 43%;
+  z-index: 1;
+  font-size: 70px;
+  position: absolute;
+}
+
+.video-header-container .header-logo {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+.calorie-calculator-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  background-color: #fff6e4;
+}
+
+.calorie-calculator-container .calorie-calculator-title {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  font-family: 'Abril Fatface', cursive;
+  padding: 20px 0;
+  font-size: 50px;
+}
+
+.calorie-calculator-container .calorie-calculator-container-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator {
+  height: 50vh;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid black;
+  border-radius: 25px;
+  background-color: #71C8DE;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px lightgray;
+  padding: 0 20px;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-sex-container {
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-sex-container .calorie-calculator-gender-selection-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-weight-measurement-container {
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-weight-measurement-container .calorie-calculator-weight-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-age-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-height-container {
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-height-container .height-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-height-container .height-values.hidden {
+  display: none;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-height-container .centimeter-value.hidden {
+  display: none;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-weight-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-weight-container .height-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-activity-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-activity-container .activity-amount {
+  font-size: 16px;
+  -webkit-box-shadow: 1px 1px 1px #6EADFF;
+          box-shadow: 1px 1px 1px #6EADFF;
+}
+
+.calorie-calculator-container .calorie-calculator .calculate-calories-button {
+  width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 19px;
+  -webkit-box-shadow: 1px 1px 1px #6EADFF;
+          box-shadow: 1px 1px 1px #6EADFF;
+}
+
+.calorie-calculator-container .calorie-calculator .calorie-calculator-text-input {
+  font-size: 19px;
+  -webkit-box-shadow: 2px 2px 2px #6EADFF;
+          box-shadow: 2px 2px 2px #6EADFF;
+}
+
+.calorie-calculator-container .calorie-calculator .feet-height-input {
+  width: 49%;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .calorie-calculator-results-title {
+  padding: 15px 0;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .results-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .results-container .loss-text {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid black;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .results-container .loss-text-maintain {
+  border-top: 1px solid black;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .results-container .calorie-count-container {
+  padding: 0 10px;
+}
+
+.calorie-calculator-container .calorie-calculator-results-container .results-container .calorie-count-maintain {
+  border-top: 1px solid black;
+}
+
+.weight-loss-container {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff6e4;
+}
+
+.weight-loss-container .weight-loss-title {
+  width: 100%;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  font-family: 'Abril Fatface', cursive;
+  padding: 20px 0;
+  font-size: 50px;
+}
+
+.weight-loss-container .weight-loss-graph-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  padding: 40px 0;
+}
+
+.weight-loss-container .weight-loss-graph-container .weight-date-container {
+  height: 20vh;
+  width: 30%;
+  border: 2px solid black;
+  background-color: #71C8DE;
+  font-family: sans-serif;
+}
+
+.weight-loss-container .weight-loss-graph-container .weight-date-container .weight-date {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weight-loss-container .weight-loss-graph-container .current-weight {
+  text-align: center;
+  font-size: 18px;
+  width: 50px;
+}
+
+.weight-loss-container .weight-loss-graph-container .date-input {
+  text-align: center;
+  font-size: 18px;
+  width: 60px;
+}
+
+.weight-loss-container .weight-loss-graph-container .submit-weight-button {
+  font-size: 20px;
+  padding: 3px 20px;
+}
+
+.weight-loss-container .weight-loss-graph-container .graph-container {
+  background-color: #71C8DE;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+@media (max-width: 1280px) and (max-height: 871px) {
+  .calorie-calculator-container {
+    height: 100vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    margin: 0 20px;
+  }
+  .video-header-container .header-title-top {
+    left: 20%;
+  }
+  .video-header-container .header-title-bottom {
+    left: 30%;
+  }
+  .video-header-container .header-logo {
+    left: 52%;
+  }
+  .calorie-calculator-container {
+    height: 100vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    margin: 0 20px;
+  }
+  .video-header-container .header-title-top {
+    left: 5%;
+  }
+  .video-header-container .header-title-bottom {
+    left: 20%;
+  }
+  .video-header-container .header-logo {
+    left: 50%;
+  }
+  .calorie-calculator-container {
+    height: 100vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 40%;
+  }
+  .weight-loss-container .weight-loss-graph-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    width: 40%;
+  }
+  .weight-loss-container .weight-loss-graph-container .graph-container {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 958px) and (max-height: 926px) {
+  .video-header-container .header-title-top {
+    left: 10%;
+  }
+  .video-header-container .header-title-bottom {
+    left: 25%;
+  }
+  .video-header-container .header-logo {
+    left: 55%;
+  }
+  .calorie-calculator-container {
+    height: 100vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 35%;
+  }
+  .weight-loss-graph-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-graph-container .graph-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 736px) and (max-height: 414px) {
+  .navigation-bar .navigation-bar-left {
+    display: hidden;
+  }
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    font-size: 17px;
+    margin: 0 20px;
+  }
+  .video-header-container .header-title-top {
+    font-size: 40px;
+    top: 5%;
+    left: 20%;
+  }
+  .video-header-container .header-title-bottom {
+    font-size: 40px;
+    top: 30%;
+    left: 35%;
+  }
+  .video-header-container .header-logo {
+    height: 120px;
+    width: 120px;
+    top: 45%;
+    left: 55%;
+  }
+  .calorie-calculator-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 300vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    height: 350px;
+    width: 80%;
+    margin: 20px 0;
+  }
+  .weight-loss-container .weight-loss-title {
+    font-size: 25px;
+  }
+  .weight-loss-container .weight-loss-graph-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    height: 200px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 414px) and (max-height: 736px) {
+  .navigation-bar .navigation-bar-left {
+    display: hidden;
+  }
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    font-size: 17px;
+    margin: 0 5px;
+  }
+  .video-header-container .header-title-top {
+    font-size: 40px;
+    top: 25%;
+    left: 5%;
+  }
+  .video-header-container .header-title-bottom {
+    font-size: 40px;
+    top: 40%;
+    left: 20%;
+  }
+  .video-header-container .header-logo {
+    height: 150px;
+    width: 150px;
+    top: 45%;
+    left: 50%;
+  }
+  .calorie-calculator-container {
+    height: 150vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 110vh;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 80%;
+  }
+  .weight-loss-container .weight-loss-title {
+    font-size: 25px;
+  }
+  .weight-loss-container .weight-loss-graph-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    width: 80%;
+  }
+  .weight-loss-container .weight-loss-graph-container .myChart {
+    height: 150px;
+  }
+}
+
+@media (max-width: 812px) and (max-height: 375px) {
+  .navigation-bar .navigation-bar-left {
+    display: hidden;
+  }
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    font-size: 17px;
+    margin: 0 20px;
+  }
+  .video-header-container .header-title-top {
+    font-size: 40px;
+    top: 5%;
+    left: 20%;
+  }
+  .video-header-container .header-title-bottom {
+    font-size: 40px;
+    top: 30%;
+    left: 35%;
+  }
+  .video-header-container .header-logo {
+    height: 120px;
+    width: 120px;
+    top: 45%;
+    left: 55%;
+  }
+  .calorie-calculator-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 325vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    height: 350px;
+    width: 80%;
+    margin: 20px 0;
+  }
+  .weight-loss-container {
+    height: 100vh;
+  }
+  .weight-loss-container .weight-loss-title {
+    font-size: 25px;
+  }
+  .weight-loss-container .weight-loss-graph-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    height: 200px;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 812px) {
+  .navigation-bar .navigation-bar-left {
+    display: hidden;
+  }
+  .navigation-bar .navigation-bar-right .navigation-bar-links {
+    font-size: 14px;
+    margin: 0 5px;
+  }
+  .video-header-container .header-title-top {
+    font-size: 30px;
+    top: 30%;
+    left: 10%;
+  }
+  .video-header-container .header-title-bottom {
+    font-size: 30px;
+    top: 40%;
+    left: 25%;
+  }
+  .video-header-container .header-logo {
+    height: 100px;
+    width: 100px;
+    top: 45%;
+    left: 50%;
+  }
+  .calorie-calculator-container {
+    height: 150vh;
+  }
+  .calorie-calculator-container .calorie-calculator-title {
+    font-size: 25px;
+    margin-top: 0;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 110vh;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 80%;
+  }
+  .weight-loss-container .weight-loss-title {
+    font-size: 22px;
+  }
+  .weight-loss-container .weight-loss-graph-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    width: 80%;
+  }
+  .weight-loss-container .weight-loss-graph-container .myCanvas {
+    height: 1000px;
+    background-color: blue;
+  }
+}
+
+@media (max-width: 740px) and (max-height: 360px) {
+  .calorie-calculator-container {
+    height: 330vh;
+  }
+  .video-header-container .header-title-top {
+    font-size: 30px;
+    top: 15%;
+    left: 33%;
+  }
+  .video-header-container .header-title-bottom {
+    font-size: 30px;
+    top: 35%;
+    left: 45%;
+  }
+  .video-header-container .header-logo {
+    height: 100px;
+    width: 100px;
+    top: 45%;
+    left: 60%;
+  }
+}
+
+@media (max-width: 360px) and (max-height: 740px) {
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+  .calorie-calculator-container .calorie-calculator-container-inner .calorie-calculator {
+    width: 90%;
+  }
+  .weight-loss-container .weight-loss-graph-container .weight-date-container {
+    height: 150px;
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
